@@ -5,16 +5,28 @@ const sortByDiscount = (products) => {
   return sortedProducts;
 };
 
+const getDiscountedPrice = (price, discount) => {
+  return Math.floor(price - (price * discount) / 100);
+};
+
 const sortByRating = (products) => {
   return products.sort((a, b) => b.rating - a.rating);
 };
 
 const lowToHighSort = (products) => {
-  return products.sort((a, b) => a.price - b.price);
+  return products.sort(
+    (a, b) =>
+      getDiscountedPrice(a.price, a.discountPercentage) -
+      getDiscountedPrice(b.price, b.discountPercentage)
+  );
 };
 
 const highToLowSort = (products) => {
-  return products.sort((a, b) => b.price - a.price);
+  return products.sort(
+    (a, b) =>
+      getDiscountedPrice(b.price, b.discountPercentage) -
+      getDiscountedPrice(a.price, a.discountPercentage)
+  );
 };
 
 export const sortFunction = (arrayToBeSorted, sortByType) => {

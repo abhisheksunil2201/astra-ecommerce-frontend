@@ -13,3 +13,23 @@
   width: 300px;
   object-fit: contain;
 }
+@media only screen and (max-width: 900px) {
+  .home__categories {
+    display: flex;
+    max-width: 900px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .home__categories {
+    overflow-x: scroll;
+    display: flex;
+    max-width: 600px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .home__categories {
+    overflow-x: scroll;
+    display: flex;
+    max-width: 500px;
+  }
+}

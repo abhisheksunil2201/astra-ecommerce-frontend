@@ -2,6 +2,7 @@ import { Button } from "@material-ui/core";
 import { Close, SwapVert } from "@material-ui/icons";
 import { UseProduct } from "../../context/ProductContext";
 import "./MobileFilter.css";
+import filter from "../../assets/filter.svg";
 
 const sortByNames = [
   "Better Discount",
@@ -41,7 +42,7 @@ export const MobileFilter = () => {
           <SwapVert /> SORT
         </button>
         <button className="filter-btn" onClick={filterButtonHandler}>
-          <i className="fa fa-filter"></i> FILTER
+          <img src={filter} alt="" /> FILTER
         </button>
       </div>
       {state.openSort && (

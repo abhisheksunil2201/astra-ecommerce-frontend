@@ -75,7 +75,7 @@
   .wishlist {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 3rem;
+    margin: 10px 0 3rem 1rem;
   }
 }
 
@@ -87,6 +87,7 @@
     grid-row-gap: 2rem;
     margin-right: 1rem;
     margin-bottom: 1rem;
+    margin: 10px 0 3rem 1rem;
   }
 }
 

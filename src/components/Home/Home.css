@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home__category {
+  color: #05548c;
+  font-size: 24px;
+  font-weight: 600;
+}
+.categories__image {
+  height: 300px;
+  width: 300px;
+  object-fit: contain;
+}

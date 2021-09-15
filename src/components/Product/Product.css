@@ -1,0 +1,112 @@
+/* Products.js */
+.products__wrapper {
+  display: flex;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 10px 0 0 10px;
+  width: 95%;
+  justify-content: space-between;
+}
+.products a {
+  text-decoration: none;
+}
+/* Product.js */
+.product {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 30px;
+  max-width: 210px;
+}
+.product__image {
+  height: 280px;
+  width: 210px;
+  object-fit: cover;
+}
+.product__details {
+  padding: 5px;
+  position: relative;
+}
+.product__name,
+.product__price,
+.product__description {
+  margin-top: -1%;
+  font-size: 16px;
+  line-height: 1;
+  color: #282c3f;
+}
+.product__description {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.product__name,
+.product__price {
+  font-weight: 500;
+}
+.product__price {
+  font-size: 14px;
+  display: flex;
+  align-items: flex-end;
+}
+.product__price > div {
+  font-size: 11px;
+  margin-left: 2px;
+}
+.product__wishlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: none;
+  background-color: white;
+}
+.products__noProducts {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-top: 4rem;
+}
+/* .product:hover {
+  &.product__wishlist {
+    display: flex;
+  }
+} */
+@media only screen and (max-width: 486px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 2rem;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    grid-column-gap: 2rem;
+  }
+}

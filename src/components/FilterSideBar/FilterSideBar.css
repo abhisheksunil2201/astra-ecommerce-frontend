@@ -1,0 +1,90 @@
+.sidebar {
+  min-width: 13rem;
+  padding: 1rem;
+  position: relative;
+  border-right: 1px solid #e5e7eb;
+}
+
+/*Checkbox*/
+.filter__labels {
+  display: block;
+  position: relative;
+  padding-left: 1.7rem;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.filter__labels input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border: 1px solid #ccc;
+}
+.filter__labels:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.filter__labels input:checked ~ .checkmark {
+  background-color: #ff3f6c;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.filter__labels input:checked ~ .checkmark:after {
+  display: block;
+}
+.filter__labels .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 3px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/*Checkbox End*/
+.sidebar__heading {
+  display: flex;
+  justify-content: space-between;
+}
+.sidebar__heading > div {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+.sidebar__heading > button {
+  font-weight: 500;
+  font-size: 13px;
+  color: #ff3f6c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.brandFilter {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+@media only screen and (max-width: 821px) {
+  .sidebar {
+    display: none;
+  }
+}

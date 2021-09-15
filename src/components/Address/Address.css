@@ -1,0 +1,26 @@
+.address-container {
+  display: flex;
+  padding: 1rem;
+  flex: 0.6;
+}
+.address-wrapper {
+  margin: 0.4rem;
+  display: flex;
+}
+.address-wrapper input {
+  padding: 1rem;
+  width: 80%;
+  border: 1px solid lightgray;
+  margin-bottom: 0.5rem;
+}
+.address__form {
+  width: 100%;
+}
+@media only screen and (max-width: 960px) {
+  .address-wrapper {
+    flex-direction: column;
+  }
+  .address-wrapper input {
+    width: 90%;
+  }
+}

@@ -19,7 +19,17 @@ export const WishlistCard = ({ item }) => {
       <img className="product__image" src={item.product.image} alt="product" />
       <div className="wishlistProduct__details">
         <p className="wishlistProduct__name">{item.product.name}</p>
-        <p className="wishlistProduct__price">Rs. {item.product.price}</p>
+        <div className="product__price">
+          Rs.{" "}
+          {Math.floor(
+            item.product.price -
+              (item.product.price * item.product.discountPercentage) / 100
+          )}
+          <div className="price__strikethrough">Rs. {item.product.price}</div>
+          <div className="price__discount">
+            ({item.product.discountPercentage}% OFF)
+          </div>
+        </div>
       </div>
       <Button
         onClick={(e) => {

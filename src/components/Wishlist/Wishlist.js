@@ -7,7 +7,6 @@ import { WishlistCard } from "./WishlistCard";
 
 export const Wishlist = () => {
   const { state } = UseProduct();
-  console.log(state);
   return (
     <>
       {state.wishlist.length !== 0 && (

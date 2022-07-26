@@ -51,7 +51,7 @@ export const Login = () => {
   const handleGuestLogin = async () => {
     const email = 'test@gmail.com';
     const password = 'test123';
-    const guest = {{ email: email, password: password })
+    const guest = { email: email, password: password }
     const response = await LoginUserWithCredentials(
         user,
         location.state?.from ? location.state.from : "/"

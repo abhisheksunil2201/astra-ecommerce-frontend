@@ -53,7 +53,7 @@ export const Login = () => {
     const password = 'test123';
     const guest = { email: email, password: password }
     const response = await LoginUserWithCredentials(
-        user,
+        guest,
         location.state?.from ? location.state.from : "/"
       );
       if (response.status !== 200) {

@@ -47,6 +47,19 @@ export const Login = () => {
     }
     return validation;
   };
+  
+  const handleGuestLogin = async () => {
+    const email = 'test@gmail.com';
+    const password = 'test123';
+    const guest = {{ email: email, password: password })
+    const response = await LoginUserWithCredentials(
+        user,
+        location.state?.from ? location.state.from : "/"
+      );
+      if (response.status !== 200) {
+        setErrorAPI(response.response.data.error);
+      }
+  }
 
   const handleLogin = async () => {
     if (validateForm()) {
@@ -84,6 +97,9 @@ export const Login = () => {
         {error.password && <small className="redText">*{error.password}</small>}
         <Button className="login__button" onClick={handleLogin}>
           LOGIN
+        </Button>
+        <Button className="login__button" onClick={handleGuestLogin}>
+          Login as Guest
         </Button>
         {errorAPI && <small className="redText">*{errorAPI}</small>}
         <small className="login__createAcc">
